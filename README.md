@@ -103,6 +103,6 @@ Essa aplicação faz parte de um projeto fullstack, para mais informações sobr
 
 ## Saiba mais
 
-Você pode conhecer mais em [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Você pode conhecer mais em [Documentação Create React App](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Para aprender React, veja [React documentation](https://reactjs.org/).
+Para aprender React, veja [Documentação React](https://reactjs.org/).

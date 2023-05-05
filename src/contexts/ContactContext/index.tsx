@@ -72,9 +72,11 @@ export const ContactProvider = ({ children }: iContactContextProps) => {
 	useEffect(() => {
 		const handleContacts = async () => {
 			try {
-				const res = await api.get<iUserWithContacts>('contacts');
+				if (user) {
+					const res = await api.get<iUserWithContacts>('contacts');
 
-				setContacts(res.data.contacts);
+					setContacts(res.data.contacts);
+				}
 			} catch (error) {
 				console.error(error);
 			}

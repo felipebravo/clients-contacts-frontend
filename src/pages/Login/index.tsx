@@ -34,44 +34,50 @@ export const Login = () => {
 	};
 
 	return (
-		<Main>
-			<Form>
-				<h1 className="form_title">Faça seu login</h1>
-				<StyledInputDiv>
-					<Input
-						type="email"
-						placeholder="E-mail"
-						{...register('email')}
-					/>
-					<StyledInputLabel className="text">E-mail</StyledInputLabel>
-					<Message>{errors.email?.message}</Message>
-				</StyledInputDiv>
-				<StyledInputDiv>
-					<Input
-						type={seePass ? 'text' : 'password'}
-						placeholder="Senha"
-						{...register('password')}
-					/>
-					<StyledInputLabel className="text">Senha</StyledInputLabel>
-					{seePass ? (
-						<VscEye onClick={() => setSeePass(false)} />
-					) : (
-						<VscEyeClosed onClick={() => setSeePass(true)} />
-					)}
-					<Message>{errors.password?.message}</Message>
-				</StyledInputDiv>
-				<Button
-					type="button"
-					onClick={() => {
-						handleLogin();
-					}}
-				>
-					Continuar
-				</Button>
-				<p className="form_paragraph">OU</p>
-				<Link to="/signup">Ainda não é cadastrado?</Link>
-			</Form>
-			<Footer />
-		</Main>
+		<>
+			<Main>
+				<Form>
+					<h1 className="form_title">Faça seu login</h1>
+					<StyledInputDiv>
+						<Input
+							type="email"
+							placeholder="E-mail"
+							{...register('email')}
+						/>
+						<StyledInputLabel className="text">
+							E-mail
+						</StyledInputLabel>
+						<Message>{errors.email?.message}</Message>
+					</StyledInputDiv>
+					<StyledInputDiv>
+						<Input
+							type={seePass ? 'text' : 'password'}
+							placeholder="Senha"
+							{...register('password')}
+						/>
+						<StyledInputLabel className="text">
+							Senha
+						</StyledInputLabel>
+						{seePass ? (
+							<VscEye onClick={() => setSeePass(false)} />
+						) : (
+							<VscEyeClosed onClick={() => setSeePass(true)} />
+						)}
+						<Message>{errors.password?.message}</Message>
+					</StyledInputDiv>
+					<Button
+						type="button"
+						onClick={() => {
+							handleLogin();
+						}}
+					>
+						Continuar
+					</Button>
+					<p className="form_paragraph">OU</p>
+					<Link to="/signup">Ainda não é cadastrado?</Link>
+				</Form>
+				<Footer />
+			</Main>
+		</>
 	);
 };

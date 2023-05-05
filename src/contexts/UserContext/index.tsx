@@ -14,6 +14,7 @@ export interface iLogin {
 
 interface iLoginRes {
 	token: string;
+	user: iUser;
 }
 
 interface iDecodedToken {
@@ -91,8 +92,10 @@ export const UserProvider = ({ children }: iUserContextProps) => {
 	const login = async (userAccess: iLogin): Promise<void> => {
 		try {
 			const res = await api.post<iLoginRes>('login', userAccess);
+			const { user, token } = res.data;
 
-			localStorage.setItem('@authToken', res.data.token);
+			setUser(user);
+			localStorage.setItem('@authToken', token);
 
 			const decodedToken = (await jwtDecode(
 				res.data.token

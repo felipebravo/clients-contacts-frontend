@@ -19,8 +19,17 @@ export const Button = styled.button`
 
 	color: var(--primary-green);
 
+	svg {
+		font-size: 24px;
+		margin: 0 4px;
+	}
+
 	&:hover {
 		box-shadow: 0px 5px 5px rgba(77, 84, 59, 0.7);
 		transition: 0.5s;
+
+		svg {
+			color: var(--primary-red);
+		}
 	}
 `;

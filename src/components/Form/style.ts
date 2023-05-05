@@ -4,7 +4,8 @@ export const StyledDivForm = styled.div`
 	display: flex;
 
 	width: 500px;
-	height: 500px;
+	height: fit-content;
+	max-height: 90vh;
 
 	background-color: var(--bg-color2);
 
@@ -18,6 +19,10 @@ export const StyledDivForm = styled.div`
 	background-size: 10px 36px;
 
 	box-shadow: -8px 8px 20px rgba(0, 0, 0, 1);
+
+	@media (max-width: 500px) {
+		width: 90%;
+	}
 `;
 
 export const StyledBorder = styled.div`

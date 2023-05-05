@@ -9,6 +9,6 @@ export const StyledFooter = styled.footer`
 	justify-content: center;
 
 	width: 100%;
-	height: 100px;
+	height: 40px;
 	padding: 10px;
 `;

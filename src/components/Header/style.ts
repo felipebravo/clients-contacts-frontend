@@ -58,4 +58,9 @@ export const StyledHeader = styled.header`
 			font-size: 24px;
 		}
 	}
+
+	@media (max-width: 624px) {
+		flex-direction: column;
+		height: fit-content;
+	}
 `;

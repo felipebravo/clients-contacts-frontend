@@ -1,18 +1,31 @@
 import { MdAlternateEmail } from 'react-icons/md';
 import { GrPhone, GrContactInfo } from 'react-icons/gr';
+import { FiEdit3 } from 'react-icons/fi';
 import { StyledContactCard } from './style';
-import { iUser } from '../../contexts/UserContext';
+import { ContactContext, iContact } from '../../contexts/ContactContext';
+import { useContext } from 'react';
 
 interface iProps {
-	contact: iUser;
+	contact: iContact;
 	index: number;
 }
 
 export const ContactCard = (props: iProps) => {
 	const { contact, index } = props;
 
+	const { setEditContactModal, setSelectedContact } =
+		useContext(ContactContext);
+
 	return (
 		<StyledContactCard key={index}>
+			<button
+				onClick={() => {
+					setEditContactModal(true);
+					setSelectedContact(contact);
+				}}
+			>
+				<FiEdit3 />
+			</button>
 			<div className="contact_data">
 				<GrContactInfo />
 				<p>{contact.fullName}</p>

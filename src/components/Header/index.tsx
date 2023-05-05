@@ -6,7 +6,7 @@ import { MdAlternateEmail } from 'react-icons/md';
 import { GrPhone, GrContactInfo } from 'react-icons/gr';
 
 export const Header = () => {
-	const { user } = useContext(UserContext);
+	const { user, setEditUserModal, logout } = useContext(UserContext);
 
 	return (
 		<StyledHeader>
@@ -22,10 +22,20 @@ export const Header = () => {
 				<GrPhone />
 				<p>{user?.phone}</p>
 			</div>
-			<button className="edit_profile">
+			<button
+				className="edit_profile"
+				onClick={() => {
+					setEditUserModal(true);
+				}}
+			>
 				<FiEdit3 />
 			</button>
-			<button className="logout" onClick={() => {}}>
+			<button
+				className="logout"
+				onClick={() => {
+					logout();
+				}}
+			>
 				<FiLogOut />
 			</button>
 		</StyledHeader>

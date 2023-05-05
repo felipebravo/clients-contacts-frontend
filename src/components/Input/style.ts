@@ -49,6 +49,9 @@ export const StyledInputLabel = styled.label`
 export const StyledInputDiv = styled.div`
 	position: relative;
 
+	display: flex;
+	flex-direction: column;
+
 	width: 50%;
 	padding-top: 24px;
 

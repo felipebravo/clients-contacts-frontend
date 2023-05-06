@@ -68,7 +68,7 @@ clients-contacts-front
 3. Criação de Contatos\
    O usuário pode criar um novo contato, fornecendo as informações necessárias, como nome completo, e-mail e contato.
 
-4. Edição e Exclusão de Anúncios\
+4. Edição e Exclusão de Contatos\
    O usuário pode editar ou excluir seus próprios contatos.
 
 ## Tecnologias 💻
